@@ -37,3 +37,11 @@ gap: 2rem;
     transform: scale(0.95);
     cursor: pointer;
 }
+.left .nav-link{
+    text-decoration: none;
+    color: rgb(211, 209, 209);
+     font-weight: 500;
+}
+.left .nav-link:active{
+    color:rgb(97, 154, 219);
+}
