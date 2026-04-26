@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #ffffff; 
+}
+/* html, body {
+  width: 100%;
+  height: 100%;
+    max-width: 100%;
+  overflow-x: hidden;
+} */
+
+/* Background */
+.login-page {
+ min-height: 100vh;
+  display: flex;
+  width:100vw;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 6rem 1rem 1rem;
+}
+
+/* Card */
+.login-card {
+  min-height: 600px;
+  width: 100%;              /* ✅ responsive */
+  max-width: 900px;         /* ✅ limit size */
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(8, 31, 92, 0.12);
+  background: #ffffff;
+  border: 1px solid rgba(8, 31, 92, 0.08);
+}
+
+/* Left side */
+.login-card__content {
+  width: 50%;
+  padding: 40px;
+  background: #ffffff;
+}
+
+.login-card__content h2 {
+  margin-bottom: 20px;
+  font-size: 28px;         /* Larger size */
+  font-weight: 800;        /* Extra bold */
+  color: #081F5C;          /* Match your primary dark blue */
+  margin-bottom: 8px;      /* Bring it closer to the sub-text */
+  letter-spacing: -0.5px;
+}
+
+.login-card__content p {
+  font-size: 20px;
+  color: #6b7a99;             /* Softer gray-blue */
+  margin-bottom: 30px;
+}
+
+/* Inputs */
+.login-card__content input[type="email"],
+.login-card__content input[type="password"] {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(8, 31, 92, 0.18);
+  background: #f8fbff;
+  color: #081F5C;
+  outline: none;
+  box-sizing: border-box;
+  pointer-events: auto;
+  z-index: 2;
+  position: relative;
+  -webkit-appearance: none;
+}
+
+.login-card__content input[type="email"]::placeholder,
+.login-card__content input[type="password"]::placeholder {
+  color: #7a8dac;
+  opacity: 1;
+}
+
+.login-card__content input[type="email"]:focus,
+.login-card__content input[type="password"]:focus {
+  background: #fff;
+  border-color: #4FA3FF;
+  box-shadow: 0 0 0 3px rgba(79, 163, 255, 0.18);
+}
+
+.login-card__content input:-webkit-autofill,
+.login-card__content input:-webkit-autofill:hover,
+.login-card__content input:-webkit-autofill:focus,
+.login-card__content input:-webkit-autofill:active {
+  -webkit-text-fill-color: #081F5C !important;
+  -webkit-box-shadow: 0 0 0 1000px #f8fbff inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #081F5C;
+}
+
+/* Button */
+.login-card__content button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to right, #081F5C, #334EAC);
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 12px 24px rgba(8, 31, 92, 0.18);
+}
+
+.login-card__content button:hover {
+  background: linear-gradient(to right, #0B2D5B, #4FA3FF);
+}
+
+/* Signup */
+.signup {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.signup span {
+  color: #4FA3FF;
+  cursor: pointer;
+}
+
+/* Right side */
+.login-card__panel {
+  width: 50%;
+  background:
+    radial-gradient(circle at top right, rgba(92, 225, 230, 0.16), transparent 30%),
+    linear-gradient(145deg, #081F5C 0%, #0B2D5B 55%, #334EAC 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.login-card__panel h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.login-card__panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.login-card__panel li {
+  margin: 10px 0;
+  color: #D7E3FF;
+}
+/* 📱 Mobile View */
+@media (max-width: 768px) {
+  .login-card__panel {
+    display: none;
+  }
+
+  .login-card {
+    justify-content: center; /* optional but makes it look clean */
+  }
+
+  .login-card__content {
+    width: 100%;
+  }
+}
+
+
